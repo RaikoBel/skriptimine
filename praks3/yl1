@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#Küsin ees ja perekonnanime
+echo "Sisesta oma ees ja perenimi: "
+read nimi
+
+#Tervitan antud inimest siin
+echo "Tere, $nimi!"
