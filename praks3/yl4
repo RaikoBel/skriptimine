@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#Kusin reisjate arvu
+
+read -p "Sisesta reisjate arv:" reisjate_arv
+read -p "Sisesta kohtade arv ühes bussis:" kohtade_arv
+
+#Arvutan busside arvu
+taidetud_bussid=$(($reisjate_arv / $kohtade_arv))
+echo "Täielikult täidetud busse: $taidetud_bussid" 
+#Muutuja mahajaanud inimeste jaoks
+mahajaavad_inimesed=$(($reisjate_arv - ($kohtade_arv * $taidetud_bussid)))
+kogu_kohtade_arv=$(($kohtade_arv * $taidetud_bussid))
+#Arvutan, kui palju inimesi jääb maha
+if [ $reisjate_arv \> $kogu_kohtade_arv ]; then
+	echo "Inimesi jääb maha: $mahajaavad_inimesed"
+
+else 
+
+	echo "Inimesi ei jää maha"
+
+fi
+
+
