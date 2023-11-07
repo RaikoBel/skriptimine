@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Küsi ainepunktide arv
+read -p "Sisesta ainepunktide arv: " ainepunktid
+
+
+#Küsi nädalate arv
+read -p "Sisesta nädalate arv: " nadalad
+
+#Arvutused
+ajakulu=$(echo "scale=1; ($ainepunktid * 26 / $nadalad)" | bc)
+
+#Ümardan selle ülespoole
+
+ajakulu_ymardatult=$(echo "scale=0; ($ajakulu + 0.9) / 1" | bc)
+
+#Tulemuse väljastus
+
+echo "Ühe nädala eeldatav ajakulu on: $ajakulu_ymardatult!"
