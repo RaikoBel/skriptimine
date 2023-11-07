@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#Skript kasutaja tervitamiseks
+
+#valjasta tere, ilma reavahetuseta
+echo -n "Tere, " 
+
+#valjasta kasutaja ilma reavahetuseta
+kasutajanimi=$(whoami)
+echo $kasutajanimi
+#valjasta ! ilma reavahetuseta
+echo "!" 
+
+#skripti lopp
+
+
