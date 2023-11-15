@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#Skript, mis kusib kasutaja vanust ning valjastab seletava kirjelduse
+
+echo "Palun sisesta oma vanus: "
+read vanus
+
+if test $vanus -gt -1 -a $vanus -lt 12
+then
+	echo "Sa oled laps"
+elif test $vanus -gt 11 -a $vanus -lt 19
+then
+	echo "Sa oled nooruk"
+elif test $vanus -gt 17 -a $vanus -lt 64
+then
+	echo "Sa oled täiskasvanu"
+elif test $vanus -gt 63
+then
+	echo "Sa oled seenior"
+else 
+	echo "vigane sisend"
+fi
+
+
