@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#Skript, millele peab andma kaivitamiseks argumendi
+
+#Kontrollin, kas anti 1 argument
+if [ "$#" -eq  1 ]; then
+	#Kontrollin, kas sisestatud arv on taisarv
+	if [[ $1 =~ ^[0-9]+$ ]]; then
+	 #Vaatan, kas arv on tais voi paaritu
+	 if (( $1 % 2 == 0 )) ; then
+	 	echo "Sisestatud arv on paaris"
+	 else
+	 	echo "Sisestatud arv on paaritu"
+	fi
+	else
+	 echo "Vigane sisend!"
+	fi
+else
+	echo "Palun käivita skript ühe täisarvuga"
+fi
+
