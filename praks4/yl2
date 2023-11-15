@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#Taiendatud reisikorraldamise skript
+
+#Andmed
+echo -n "Sisesta reisjate arv: "
+read reisjad
+echo -n "Sisesta kohtade arv bussis: "
+read kohad
+
+
+#Arvutused
+
+bussid=$(($reisjad / $kohad))
+#ylejaak
+ylejaanud=$(($reisjad / $kohad))
+
+#kui on jaak, tuleb busside arvu tosta 1 vorra
+if test $ylejaanud -gt 0
+then
+	bussid=$(($bussid + 1))
+fi
+
+#tulemuse valjastamine
+echo "Kokku on vaja $bussid tais busse"
+
